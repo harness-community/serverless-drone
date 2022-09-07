@@ -9,11 +9,7 @@ exports.handler = async (event, context) => {
   let givenPayload = "";
   try {
     givenPayload = JSON.parse(event.body);
-    console.debug("event.after: " + givenPayload.after);
-    console.debug("event after hash: " + givenPayload["after"]);
-    console.debug("givenPayload string: " + JSON.stringify(givenPayload));
   } catch (error) {
-    console.debug(error);
     context.fail(
       "Failed to parse the body property of the Event object. Body is: " +
         event.body +
@@ -78,7 +74,6 @@ exports.handler = async (event, context) => {
   } catch (error) {
     console.log("Failed to launch fargate container. Error is: " + error);
     throw "Failed to launch " + error;
-    //error('Failed to launch fargate container. error is: ' + error);
   }
 
   context.succeed("200 OK");
