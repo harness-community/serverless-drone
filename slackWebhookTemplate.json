@@ -1,0 +1,48 @@
+{
+  "blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "plain_text",
+        "text": ":rotating_light: Serverless CI results SUCCESS",
+        "emoji": true
+      }
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Click here for logs",
+            "emoji": true
+          },
+          "url": "LOGURL"
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        { "type": "plain_text", "text": "Repo: REPO", "emoji": true }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        { "type": "plain_text", "text": "Commit: COMMIT", "emoji": true }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "plain_text",
+          "text": "Pipeline: PIPELINE from PFILE",
+          "emoji": true
+        }
+      ]
+    }
+  ]
+}
