@@ -22,6 +22,9 @@ RUN apt-get update && \
 # create a test user in case your unit tests require a non-root user.
 RUN adduser --disabled-login test-user -q    
 
+# Silence git's unhelpful tutorials about detached head
+RUN git global set advice.detatchedHead false
+
 # Install the drone-runner-exec binary
 RUN curl -L https://github.com/drone-runners/drone-runner-exec/releases/latest/download/drone_runner_exec_linux_amd64.tar.gz | tar zx
 RUN install -t /usr/local/bin drone-runner-exec
