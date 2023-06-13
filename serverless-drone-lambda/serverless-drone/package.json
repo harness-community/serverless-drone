@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-ecs": "^3.169.0",
+    "@aws-sdk/client-ecs": "^3.350.0",
     "node-fetch": "^3.2.10"
   }
 }
